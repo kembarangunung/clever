@@ -7,6 +7,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN npm i -g npm
 COPY . /app/
+COPY app.py app.py
 WORKDIR /app/
 RUN pip3 install -U -r requirements.txt
 CMD ["bash","start.sh"]
